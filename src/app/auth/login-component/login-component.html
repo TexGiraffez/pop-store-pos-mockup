@@ -1,0 +1,14 @@
+<div class="login-container">
+    <h2> POS LOGIN </h2>
+    <form [formGroup]="form" style="width: 100%;">
+        <label>Username</label>
+        <input type="text" formControlName="username">
+        <label class="col-3">Password</label>
+        <input type="password"  formControlName="password">
+        
+        <div class="button-group">
+            <button type="button" class="btn-primary" [ngStyle]="{ 'margin-right' : '5px' }"  (click)="login()">Login</button>
+            <!-- <button type="button" class="btn-back" [ngStyle]="{ 'margin-left' : '5px' }" (click)="register()">Register</button> -->
+        </div>
+    </form>
+</div>

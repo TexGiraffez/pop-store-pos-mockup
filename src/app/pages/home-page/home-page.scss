@@ -1,0 +1,41 @@
+.home-container {
+  max-width: 450px;
+  max-height: 800px;
+  margin: 375px auto;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  justify-items: center;
+}
+
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.btn-grid > button {
+  transition-duration: 0.5s;
+  padding: 10px 14px;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  background: #fff;
+  font: 500 14px/1.2 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.btn-grid > .danger {
+    background-color: #800000;
+    color: #D2B48C	;
+}
+
+.btn-grid > .primary {
+    background-color: #D2B48C;
+    color: #A0522D;
+}
+
+.btn-grid > button:hover { background-color : #FFEBCD; color: #A0522D;  }
+.btn-grid > button:active { transform: translateY(1px); }
+

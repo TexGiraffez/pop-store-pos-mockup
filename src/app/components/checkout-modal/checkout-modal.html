@@ -1,0 +1,40 @@
+<h2>Checkout</h2>
+<div class="checkout-wrapper">
+  <div class="cart-summary">
+    <h3>Order Summary</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of cart; track item.id) {
+            <tr>
+                <td>{{ item.product }}</td>
+                <td>{{ item.qty }}</td>
+                <td>{{ item.price | currency : 'THB' }}</td>
+                <td>{{ item.price * item.qty | currency : 'THB' }}</td>
+            </tr>
+        }
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: right; font-weight: bold;">
+            Total
+          </td>
+          <td style="font-weight: bold;">{{ total | currency: 'THB' }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="payment">
+    <h3>Scan QR to Pay</h3>
+    <img src="assets/img/qr-payment-mockup.jpg" alt="QR Payment" class="qr-img" />
+    <button (click)="confirmPayment()">Confirm Payment</button>
+  </div>
+</div>

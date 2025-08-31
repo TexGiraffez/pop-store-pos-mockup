@@ -1,0 +1,25 @@
+<div class="pos-container">
+  <div class="products">
+    @for (p of products; track p.id) {
+        <div class="product" (click)="addToCart(p)">
+        {{p.product}} - {{p.price}} ฿
+        </div>
+    }
+  </div>
+  <div class="cart">
+    <h3>Cart</h3>
+    @for (item of cart; track item.id) {
+        <div>{{item.product}} x {{ item.qty }} - {{ item.price * item.qty  }} ฿</div>
+    }
+    <hr>
+    <p><b>Total:</b> ฿{{ total }}</p>
+
+    <div class="button-group">
+        <button class="btn-primary" (click)="checkout()">Checkout</button>
+        <button class="btn-primary" (click)="clearCart()">Clear</button>
+        <button class="btn-back" (click)="back()">Back</button>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,7 @@
+@use '../src/app/styles/variables' as v;
+
+body {
+  margin: 0;
+  font-family: v.$font-stack;
+  background: #f5f5f5;
+}
